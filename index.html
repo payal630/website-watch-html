@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETHERIS | Luxury Horology & Timepieces</title>
+  <meta name="description" content="Explore AETHERIS, a curated selection of luxury mechanical, automatic, and skeleton timepieces. Exquisite craft and styling since 1982.">
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="index.css">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header id="header" class="header">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#" class="logo">AETHERIS<span>.</span></a>
+      
+      <!-- Nav Menu (Desktop/Mobile) -->
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#" class="nav-link active">Home</a></li>
+        <li><a href="#categories" class="nav-link">Collections</a></li>
+        <li><a href="#products" class="nav-link">Shop</a></li>
+        <li><a href="#offers" class="nav-link">Exclusive Offers</a></li>
+        <li><a href="#newsletter" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <!-- Controls -->
+      <div class="nav-controls">
+        <!-- Search bar Component -->
+        <div class="search-bar-container">
+          <input type="text" id="search-input" class="search-input" placeholder="Search watches...">
+          <button class="search-icon-btn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        
+        <!-- Wishlist -->
+        <button id="wishlist-toggle-btn" class="nav-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span id="wishlist-badge" class="badge" style="display: none;">0</span>
+        </button>
+        
+        <!-- Cart Button -->
+        <button id="cart-toggle-btn" class="nav-btn" aria-label="Open Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cart-badge" class="badge" style="display: none;">0</span>
+        </button>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="burger-menu-btn" class="burger-menu-btn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SHOPPING CART DRAWER OVERLAY -->
+  <div id="cart-overlay" class="cart-overlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3 class="cart-title">Your Cart</h3>
+        <button id="cart-close-btn" class="cart-close-btn" aria-label="Close Cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      
+      <!-- Drawer items -->
+      <div id="cart-body" class="cart-body">
+        <!-- JS inserts items here -->
+        <div class="cart-empty-message">
+          <i class="fa-solid fa-hourglass-empty cart-empty-icon"></i>
+          <p>Your shopping bag is empty.</p>
+        </div>
+      </div>
+      
+      <!-- Drawer summary details -->
+      <div class="cart-footer">
+        <div class="cart-summary-line">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="cart-summary-line">
+          <span>Shipping</span>
+          <span id="cart-shipping">Calculated at checkout</span>
+        </div>
+        <div class="cart-summary-line total">
+          <span>Estimated Total</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+        <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-award"></i> The Heritage Collection
+        </div>
+        <h1 class="hero-title">
+          Crafting Time, <span>Defining Legacy.</span>
+        </h1>
+        <p class="hero-desc">
+          Indulge in precision horology. AETHERIS brings together decades of meticulous Swiss craftsmanship and avant-garde architectural watch layouts.
+        </p>
+        <div class="hero-cta">
+          <a href="#products" class="btn-primary">Explore Masterpieces</a>
+          <a href="#offers" class="btn-secondary">Limited Releases</a>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-val">100%</span>
+            <span class="stat-lbl">Swiss Caliber</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">80h</span>
+            <span class="stat-lbl">Power Reserve</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val">10yr</span>
+            <span class="stat-lbl">Global Warranty</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Premium Visual element -->
+      <div class="hero-visual">
+        <div class="hero-circle-back"></div>
+        <div class="hero-img-wrapper">
+          <img src="https://img.freepik.com/premium-photo/3d-watch-fashion-able-watch-new-watch-designs-4k-wallpaper-hd-wallpaper_1262886-3304.jpg" alt="Watch"
+         width="400" id="hero-watch-image">
+        </div>
+        <div class="hero-spec-card">
+          <div class="hero-spec-icon">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <div class="hero-spec-txt">
+            <h4>Caliber AE-82</h4>
+            <p>Automatic Skeleton Movement</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES / COLLECTIONS SECTION -->
+  <section id="categories" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">Curated Chapters</span>
+        <h2 class="section-title">The Collections</h2>
+        <div class="section-divider"></div>
+      </div>
+      
+      <div class="categories-grid">
+        <!-- Classic -->
+        <div class="category-card" data-category="classic">
+          <img src="https://www.motoringexposure.com/wp-content/gallery/cartier-clibre/cartier-calibre-4.jpg"
+         alt="Watch"
+         width="400" class="category-img"> 
+          <div class="category-overlay">
+            <h3 class="category-title">Classic Chronographs</h3>
+            <span class="category-count">Explore Series <i class="fa-solid fa-arrow-right-long"></i></span>
+          </div>
+        </div>
+        
+        <!-- Skeleton -->
+        <div class="category-card" data-category="skeleton">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.lHxk3R7n4WbK8AGKppPgXQHaHa?r=0&w=626&h=626&rs=1&pid=ImgDetMain&o=7&rm=3"  alt="Watch"
+         width="400" class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-title">Skeleton Automatic</h3>
+            <span class="category-count">Explore Series <i class="fa-solid fa-arrow-right-long"></i></span>
+          </div>
+        </div>
+        
+        <!-- Diver -->
+        <div class="category-card" data-category="diver">
+          <img src="https://i.pinimg.com/736x/2e/7b/bd/2e7bbd91496b3402960de0d805bb3a69.jpg" alt="Watch"
+         width="400"  class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-title">Diver's Automatic</h3>
+            <span class="category-count">Explore Series <i class="fa-solid fa-arrow-right-long"></i></span>
+          </div>
+        </div>
+        
+        <!-- Minimalist -->
+        <div class="category-card" data-category="minimalist">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.tkKS15iaMFtzm9AC1iLvzgHaHa?r=0&w=1000&h=1000&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Watch"
+         width="400"  class="category-img">
+          <div class="category-overlay">
+            <h3 class="category-title">Minimalist Quartz</h3>
+            <span class="category-count">Explore Series <i class="fa-solid fa-arrow-right-long"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section id="products" class="section" style="background-color: #0c0f14;">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">The Timepiece Gallery</span>
+        <h2 class="section-title">Exquisite Catalog</h2>
+        <div class="section-divider"></div>
+      </div>
+      
+      <!-- Filter controls -->
+      <div class="product-filters">
+        <div id="filter-tabs" class="filter-tabs">
+          <button class="filter-tab active" data-category="all">All Watches</button>
+          <button class="filter-tab" data-category="classic">Classic</button>
+          <button class="filter-tab" data-category="skeleton">Skeleton</button>
+          <button class="filter-tab" data-category="diver">Diver</button>
+          <button class="filter-tab" data-category="minimalist">Minimalist</button>
+        </div>
+        
+        <div class="sort-select-wrapper">
+          <i class="fa-solid fa-arrow-down-wide-short" style="font-size: 12px; color: var(--text-secondary);"></i>
+          <select id="sort-select" aria-label="Sort products by">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- Products Grid -->
+      <div id="products-grid" class="products-grid">
+        <!-- JS dynamic content -->
+      </div>
+    </div>
+  </section>
+
+  <!-- EXCLUSIVE OFFERS / HIGHLIGHT SECTION -->
+  <section id="offers" class="section offer-section">
+    <div class="container offer-grid">
+      <div class="offer-content">
+        <span class="section-subtitle">Limited Anniversary Release</span>
+        <h2 class="section-title" style="font-size: clamp(32px, 3.5vw, 48px); font-family: var(--font-serif); margin-bottom: 20px;">
+          The Spectre Carbon Edition
+        </h2>
+        <p class="hero-desc" style="margin-bottom: 24px;">
+          Crafted with a forged carbon case, custom-molded FKM rubber strap, and a titanium skeleton movement architecture. Available strictly in 100 individually numbered models worldwide.
+        </p>
+        
+        <!-- Countdown Widget -->
+        <div class="offer-countdown">
+          <div class="countdown-box">
+            <span id="days" class="countdown-val">00</span>
+            <span class="countdown-lbl">Days</span>
+          </div>
+          <div class="countdown-box">
+            <span id="hours" class="countdown-val">00</span>
+            <span class="countdown-lbl">Hours</span>
+          </div>
+          <div class="countdown-box">
+            <span id="minutes" class="countdown-val">00</span>
+            <span class="countdown-lbl">Mins</span>
+          </div>
+          <div class="countdown-box">
+            <span id="seconds" class="countdown-val">00</span>
+            <span class="countdown-lbl">Secs</span>
+          </div>
+        </div>
+        
+        <!-- Promo Coupon Copy Component -->
+        <div class="coupon-container">
+          <span class="coupon-lbl">Anniversary Code:</span>
+          <span class="coupon-code">AETHERIS10</span>
+          <button id="copy-coupon-btn" class="coupon-btn" aria-label="Copy promotion code">
+            <i class="fa-regular fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+      
+      <!-- Visual Display -->
+      <div class="offer-visual">
+        <div class="offer-circle-back"></div>
+        <div class="offer-img-wrapper">
+        <img src="https://cdn.pixabay.com/photo/2014/12/08/14/23/pocket-watch-560937_1280.jpg"
+         alt="Watch"
+         width="400">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER SIGN UP -->
+  <section id="newsletter" class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="section-head" style="margin-bottom: 30px;">
+          <span class="section-subtitle">Privileged Circle</span>
+          <h2 class="section-title">Join The Club</h2>
+          <div class="section-divider"></div>
+        </div>
+        <p class="newsletter-desc">
+          Subscribe to acquire access to private releases, limited horological allocations, and brand history stories.
+        </p>
+        
+        <form id="newsletter-form" class="newsletter-form">
+          <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your email address" required>
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK VIEW MODAL OVERLAY -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal-card">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close details modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div id="modal-content" class="modal-grid">
+        <!-- Dynamic JS Modal Content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Logo Col -->
+        <div class="footer-col">
+          <a href="#" class="footer-brand">AETHERIS<span>.</span></a>
+          <p class="footer-desc">
+            AETHERIS represents the peak of custom luxury horology. Merging avant-garde skeletonization with traditional chronometric values.
+          </p>
+          <div class="footer-socials">
+            <button class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></button>
+            <button class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></button>
+            <button class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></button>
+            <button class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></button>
+          </div>
+        </div>
+        
+        <!-- Links 1 -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#products">Aura Skeleton</a></li>
+            <li><a href="#products">Spectre Forged Carbon</a></li>
+            <li><a href="#products">Neptune Diver's series</a></li>
+            <li><a href="#products">Horizon Slimlines</a></li>
+          </ul>
+        </div>
+        
+        <!-- Links 2 -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Brand Info</h4>
+          <ul class="footer-links">
+            <li><a href="#">Our Heritage</a></li>
+            <li><a href="#">The Workshops</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        
+        <!-- Links 3 -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="#">Warranty Registry</a></li>
+            <li><a href="#">Service Request</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Bespoke Consultations</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 AETHERIS Horology S.A. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie settings</a>
+        </div>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa" aria-label="Visa"></i>
+          <i class="fa-brands fa-cc-mastercard" aria-label="Mastercard"></i>
+          <i class="fa-brands fa-cc-amex" aria-label="American Express"></i>
+          <i class="fa-brands fa-cc-discover" aria-label="Discover"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic JS -->
+  <script src="app.js"></script>
+</body>
+</html>
